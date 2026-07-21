@@ -1,0 +1,218 @@
+  <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Arduino Disaster Monitoring System | LG John Labalan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <span class="logo-mark">LG</span>
+          <span class="logo-text">John Labalan</span>
+        </div>
+        <nav class="nav">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#projects" class="active">Projects</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-kicker">Project</p>
+            <h2>Arduino-Based Disaster Monitoring System</h2>
+            <p class="section-text">
+              This project is an Arduino Uno&ndash;based disaster monitoring system that
+              uses a water level sensor to track rising water and a fire sensor to
+              detect possible fires. It is designed as a simple early-warning tool
+              for flooding and fire incidents in homes or small communities.
+            </p>
+          </header>
+
+          <div class="project-summary-bar">
+            <div class="project-summary-items">
+              <div class="project-summary-item">
+                <span class="project-summary-label">Role</span>
+                <span class="project-summary-value">Solo developer</span>
+              </div>
+              <div class="project-summary-item">
+                <span class="project-summary-label">Frontend</span>
+                <span class="project-summary-value">Arduino Uno hardware prototype</span>
+              </div>
+              <div class="project-summary-item">
+                <span class="project-summary-label">Backend</span>
+                <span class="project-summary-value">Embedded C++ logic, sensors &amp; alerts</span>
+              </div>
+              <div class="project-summary-item">
+                <span class="project-summary-label">Developed</span>
+                <span class="project-summary-value">Oct-Nov 2024</span>
+              </div>
+            </div>
+            <div class="project-summary-actions">
+              <a
+                href="library-management-system-case-study.pdf"
+                class="btn btn-outline"
+                target="_blank"
+                rel="noopener"
+              >
+                View Case Study
+              </a>
+            </div>
+          </div>
+
+          <div class="about-layout project-about">
+            <div class="about-card">
+              <h3>Overview</h3>
+              <p>
+                This system is built around an Arduino Uno to continuously monitor
+                environmental conditions during potential disasters. A water level
+                sensor measures how high the water has risen, while a fire sensor
+                watches for flames or abnormal heat in the area.
+                <br /><br />
+                When readings go beyond safe thresholds, the system triggers alarms
+                through simple indicators such as a buzzer, LEDs, or messages on the
+                serial monitor. This gives people an early signal to evacuate or take
+                action before the situation becomes dangerous.
+                <br /><br />
+                The project focuses on using low-cost components and straightforward
+                code so that it can be replicated or improved for different
+                communities and local scenarios.
+              </p>
+            </div>
+            <div class="about-card">
+              <h3>Core features</h3>
+              <ul class="feature-list">
+                <li>
+                  <strong>Water level monitoring</strong>
+                  <ul>
+                    <li>Read continuous data from a water level sensor.</li>
+                    <li>Define safe, caution, and danger thresholds inside the Arduino code.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Fire detection</strong>
+                  <ul>
+                    <li>Use a fire or flame sensor to detect the presence of flames or high heat.</li>
+                    <li>Trigger alerts when fire is detected so people can respond quickly.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Alert system</strong>
+                  <ul>
+                    <li>Activate audible or visual indicators (such as a buzzer or LEDs) when danger levels are reached.</li>
+                    <li>Show status or debug messages through the Arduino serial monitor.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Low-cost, extendable design</strong>
+                  <ul>
+                    <li>Use affordable components such as an Arduino Uno and basic sensors.</li>
+                    <li>Keep the code simple so thresholds or additional sensors can be adjusted later.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <section class="project-gallery">
+            <div class="project-gallery-header">
+              <h3>Hardware photos</h3>
+              <p>Photos of the Arduino Uno setup, sensors, and prototype in use.</p>
+            </div>
+
+            <div class="project-gallery-grid" id="disaster-gallery"></div>
+
+            <div class="project-gallery-empty" id="disaster-gallery-empty">
+              <p class="project-gallery-empty-strong">No screenshots added yet.</p>
+              <p>
+                Add project images to the gallery above to replace this empty state.
+              </p>
+            </div>
+          </section>
+
+          <p class="section-text" style="margin-top: 2rem">
+            <a href="index.html#projects" style="color: var(--gold-soft)">
+              &larr; Back to projects
+            </a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <p class="footer-heading">Address</p>
+            <p class="footer-address">
+              Oroquieta City, Misamis Occidental<br />
+              Philippines
+            </p>
+            <div class="footer-contact">
+              <div class="footer-contact-label">Phone</div>
+              <div class="footer-contact-label">Email</div>
+              <a href="tel:09569012219">09569012219</a>
+              <a href="mailto:lgjohnlabalan04@gmail.com">lgjohnlabalan04@gmail.com</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <p class="footer-heading">Quick links</p>
+            <nav class="footer-links" aria-label="Footer navigation">
+              <a href="index.html#home">Home</a>
+              <a href="index.html#about">About</a>
+              <a href="index.html#projects">Projects</a>
+              <a href="index.html#contact">Contact</a>
+            </nav>
+          </div>
+          <div class="footer-column">
+            <p class="footer-heading">Social</p>
+            <div class="footer-social" aria-label="Social links">
+              <a
+                href="https://www.facebook.com/share/19nFE7FyAD/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Facebook
+              </a>
+              <a
+                href="https://www.instagram.com/lglabsu/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Instagram
+              </a>
+              <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="#" target="_blank" rel="noreferrer">TikTok</a>
+            </div>
+          </div>
+        </div>
+        <p class="footer-copy">
+          &copy; <span id="year"></span> LG John Labalan. All rights reserved.
+        </p>
+      </div>
+      <script>
+        const yearSpan = document.getElementById("year");
+        if (yearSpan) {
+          yearSpan.textContent = new Date().getFullYear();
+        }
+
+        const disasterGallery = document.getElementById("disaster-gallery");
+        const disasterEmptyState = document.getElementById("disaster-gallery-empty");
+        if (disasterGallery && disasterEmptyState) {
+          if (disasterGallery.querySelector(".project-shot")) {
+            disasterEmptyState.style.display = "none";
+          } else {
+            disasterEmptyState.style.display = "block";
+          }
+        }
+      </script>
+    </footer>
+  </body>
+</html>
