@@ -1,29 +1,61 @@
-import Navbar from './components/Navbar.jsx';
-import Hero from './components/Hero.jsx';
-import About from './components/About.jsx';
-import Projects from './components/Projects.jsx';
-import Contact from './components/Contact.jsx';
-import Footer from './components/Footer.jsx';
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import FeaturedProject from "./components/FeaturedProject";
+import Services from "./components/Services";
+import About from "./components/About";
+import TechStack from "./components/TechStack";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50">
+    <div className="bg-[#0B0B0F] text-white overflow-x-hidden">
+
+      {/* Navigation */}
       <Navbar />
-      <main className="max-w-5xl mx-auto px-4">
-        <section id="home" className="py-24">
+
+      <main>
+
+        {/* Hero */}
+        <section id="home">
           <Hero />
         </section>
-        <section id="about" className="py-24">
+
+        {/* Featured SmartEat */}
+        <section id="featured">
+          <FeaturedProject />
+        </section>
+
+        {/* Services */}
+        <section id="services">
+          <Services />
+        </section>
+
+        {/* About */}
+        <section id="about">
           <About />
         </section>
-        <section id="projects" className="py-24">
+
+        {/* Tech Stack */}
+        <section id="tech">
+          <TechStack />
+        </section>
+
+        {/* Projects */}
+        <section id="projects">
           <Projects />
         </section>
-        <section id="contact" className="py-24">
+
+        {/* Contact */}
+        <section id="contact">
           <Contact />
         </section>
+
       </main>
+
       <Footer />
+
     </div>
   );
 }

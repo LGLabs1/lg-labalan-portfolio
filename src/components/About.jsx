@@ -1,62 +1,322 @@
+import { motion } from "framer-motion";
+import {
+  FaLaptopCode,
+  FaLightbulb,
+  FaAward,
+  FaUserGraduate,
+  FaArrowRight,
+  FaCheckCircle,
+} from "react-icons/fa";
+
+import profileImage from "../assets/images/bgme.png";
+
+const highlights = [
+  {
+    icon: <FaLaptopCode />,
+    title: "Software Development",
+    description: "Modern web and mobile applications built for real businesses.",
+  },
+  {
+    icon: <FaLightbulb />,
+    title: "Problem Solving",
+    description: "Creating simple digital solutions for complex workflows.",
+  },
+  {
+    icon: <FaUserGraduate />,
+    title: "Continuous Learning",
+    description: "Always exploring better technologies and better practices.",
+  },
+  {
+    icon: <FaAward />,
+    title: "Quality Focused",
+    description: "Scalable, maintainable and user-centered software.",
+  },
+];
+
 const skills = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'React',
-  'Tailwind CSS',
-  'Git',
+  "Flutter",
+  "React",
+  "Firebase",
+  "AI Integration",
+  "UI/UX Design",
+  "Database Design",
 ];
 
 function About() {
   return (
-    <div className="space-y-8">
-      <div>
-        <h2 className="section-title">About Me</h2>
-        <p className="section-subtitle">
-          Write a short paragraph about yourself here. Talk about your
-          background, what you&apos;re studying or working on, and what kind of
-          opportunities you&apos;re looking for.
+    <section className="section py-20">
+
+      {/* Header */}
+
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 30,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: .7,
+        }}
+        viewport={{
+          once: true,
+        }}
+        className="max-w-3xl"
+      >
+
+        <p className="gold-text uppercase tracking-[0.35em] text-sm font-semibold">
+
+          About Me
+
         </p>
-      </div>
 
-      <div className="grid gap-10 md:grid-cols-[minmax(0,2fr)_minmax(0,1.4fr)]">
-        <div className="space-y-4">
-          <h3 className="text-xl font-semibold">Experience &amp; Education</h3>
-          <p className="text-slate-300 text-sm leading-relaxed">
-            Use this space to summarize your key experience, education, or
-            achievements. You can list your current role, degree, or notable
-            projects.
-          </p>
-          <div className="mt-4 inline-flex flex-wrap gap-3 text-sm">
+        <h2 className="section-title mt-4">
+
+          Building Software That
+          <br />
+
+          Helps Businesses Grow
+
+        </h2>
+
+      </motion.div>
+
+      <div className="grid lg:grid-cols-[420px_1fr] gap-16 items-center mt-14">
+
+        {/* LEFT */}
+
+        <motion.div
+          initial={{
+            opacity: 0,
+            x: -50,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+          transition={{
+            duration: .8,
+          }}
+          viewport={{
+            once: true,
+          }}
+        >
+
+          <div className="card p-6 sticky top-28">
+
+            <div className="relative">
+
+              <div className="absolute -inset-4 rounded-full bg-yellow-400/15 blur-3xl"></div>
+
+              <img
+                src={profileImage}
+                alt="LG John Labalan"
+                className="relative rounded-3xl border border-yellow-400/20"
+              />
+
+            </div>
+
+            <h3 className="text-2xl font-bold mt-6">
+
+              LG John Labalan
+
+            </h3>
+
+            <p className="text-yellow-400 mt-1">
+
+              Software Developer
+
+            </p>
+
+            <p className="text-gray-400 mt-4 leading-7">
+
+              BS Information Technology student passionate
+              about creating software that improves business
+              operations through modern technology.
+
+            </p>
+
+            <div className="flex flex-wrap gap-3 mt-6">
+
+              {skills.map((skill) => (
+
+                <span
+                  key={skill}
+                  className="rounded-full border border-yellow-400/20 bg-yellow-400/5 px-3 py-2 text-sm text-yellow-400"
+                >
+
+                  {skill}
+
+                </span>
+
+              ))}
+
+            </div>
+
             <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full bg-slate-800 px-4 py-2 font-medium text-slate-100 hover:bg-slate-700 hover:text-brand-400 transition-colors"
+              href="#contact"
+              className="primary-btn mt-8 w-full"
             >
-              Download Resume (PDF)
-            </a>
-            <span className="text-xs text-slate-500">
-              Replace <code>public/resume.pdf</code> with your own file.
-            </span>
-          </div>
-        </div>
 
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Skills</h3>
-          <div className="flex flex-wrap gap-2">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-xs font-medium text-slate-100"
-              >
-                {skill}
-              </span>
-            ))}
+              Let's Work Together
+
+              <FaArrowRight className="ml-2"/>
+
+            </a>
+
           </div>
-        </div>
+
+        </motion.div>
+                {/* RIGHT */}
+
+        <motion.div
+          initial={{
+            opacity: 0,
+            x: 50,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+          transition={{
+            duration: .8,
+          }}
+          viewport={{
+            once: true,
+          }}
+        >
+
+          <h3 className="text-4xl font-black leading-tight">
+
+            I Build Digital Products
+            <br />
+
+            <span className="gold-text">
+
+              That Solve Real Problems.
+
+            </span>
+
+          </h3>
+
+          <p className="text-gray-400 leading-8 mt-8">
+
+            My passion is developing software that improves
+            business efficiency through thoughtful design,
+            modern technologies, and intuitive user experiences.
+            Every project begins by understanding the user's
+            challenges before writing a single line of code.
+
+          </p>
+
+          <p className="text-gray-400 leading-8 mt-6">
+
+            From AI-powered restaurant systems to community
+            donation platforms and IoT monitoring solutions,
+            I enjoy building software that creates measurable
+            value for organizations and the people who use it.
+
+          </p>
+
+          {/* Core Principles */}
+
+          <div className="grid md:grid-cols-2 gap-5 mt-10">
+
+            {[
+              "Business-first development",
+              "Modern UI/UX design",
+              "Scalable architecture",
+              "Clean & maintainable code",
+              "Performance optimization",
+              "Continuous improvement",
+            ].map((item) => (
+
+              <motion.div
+                key={item}
+                whileHover={{
+                  x: 6,
+                }}
+                className="flex items-center gap-4 card p-5"
+              >
+
+                <div className="h-10 w-10 rounded-xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center">
+
+                  <FaCheckCircle className="text-yellow-400"/>
+
+                </div>
+
+                <span className="font-medium">
+
+                  {item}
+
+                </span>
+
+              </motion.div>
+
+            ))}
+
+          </div>
+
+          {/* Highlight Cards */}
+
+          <div className="grid md:grid-cols-2 gap-6 mt-12">
+
+            {highlights.map((item, index) => (
+
+              <motion.div
+                key={item.title}
+                initial={{
+                  opacity: 0,
+                  y: 20,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  delay: index * .12,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                whileHover={{
+                  y: -6,
+                }}
+                className="card p-6"
+              >
+
+                <div className="h-14 w-14 rounded-2xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center text-yellow-400 text-2xl">
+
+                  {item.icon}
+
+                </div>
+
+                <h4 className="text-xl font-bold mt-5">
+
+                  {item.title}
+
+                </h4>
+
+                <p className="text-gray-400 mt-3 leading-7">
+
+                  {item.description}
+
+                </p>
+
+              </motion.div>
+
+            ))}
+
+          </div>
+
+        </motion.div>
+
       </div>
-    </div>
+
+
+    </section>
   );
 }
 

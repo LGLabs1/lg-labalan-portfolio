@@ -1,77 +1,196 @@
+import { motion } from "framer-motion";
+import {
+  FaEnvelope,
+  FaPhone,
+  FaFacebookMessenger,
+  FaDownload,
+  FaArrowRight,
+} from "react-icons/fa";
+
+const contactMethods = [
+  {
+    icon: <FaEnvelope />,
+    title: "Email",
+    subtitle: "Best for project inquiries",
+    value: "lgjohnlabalan04@gmail.com",
+    link: "mailto:lgjohnlabalan04@gmail.com",
+  },
+  {
+    icon: <FaFacebookMessenger />,
+    title: "Messenger",
+    subtitle: "Quick conversations",
+    value: "Message Me",
+    link: "https://m.me/lg.labalan",
+  },
+  {
+  icon: <FaPhone />,
+  title: "Phone",
+  subtitle: "Call or text me",
+  value: "09569012219",
+  link: "tel:+639569012219",
+},
+];
+
 function Contact() {
-  const email = 'you@example.com';
-
   return (
-    <div className="space-y-8">
-      <div>
-        <h2 className="section-title">Contact</h2>
-        <p className="section-subtitle">
-          I&apos;m currently open to new opportunities, collaborations, or just
-          friendly chats. The best way to reach me is via email, but you can
-          also find me on social media.
+    <section className="section">
+
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: .8 }}
+        viewport={{ once: true }}
+      >
+
+        <p className="gold-text uppercase tracking-[0.3em] text-sm font-semibold">
+
+          Contact
+
         </p>
+
+        <h2 className="section-title mt-4">
+
+          Let's Build Something Amazing Together
+
+        </h2>
+
+        <p className="section-description">
+
+          Whether you're a startup, restaurant, small business,
+          or entrepreneur looking for custom software,
+          I'd love to hear about your project.
+
+        </p>
+
+      </motion.div>
+
+      <div className="grid lg:grid-cols-3 gap-8 mt-20">
+
+        {contactMethods.map((item) => (
+                    <motion.a
+            key={item.title}
+            href={item.link}
+            target="_blank"
+            rel="noreferrer"
+            whileHover={{
+              y: -8,
+              scale: 1.02,
+            }}
+            transition={{
+              duration: 0.25,
+            }}
+            className="card p-8 flex flex-col"
+          >
+            <div className="h-16 w-16 rounded-2xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center text-yellow-400 text-2xl">
+
+              {item.icon}
+
+            </div>
+
+            <h3 className="text-2xl font-bold mt-8">
+
+              {item.title}
+
+            </h3>
+
+            <p className="text-gray-400 mt-2">
+
+              {item.subtitle}
+
+            </p>
+
+            <span className="text-yellow-400 mt-6 font-semibold">
+
+              {item.value}
+
+            </span>
+
+          </motion.a>
+
+        ))}
+
       </div>
 
-      <div className="grid gap-8 md:grid-cols-2">
-        <div className="space-y-4 text-sm">
+      {/* CTA Card */}
+
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 40,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 0.8,
+        }}
+        viewport={{
+          once: true,
+        }}
+        className="card mt-20 p-10 lg:p-14 relative overflow-hidden"
+      >
+
+        <div className="absolute right-0 top-0 h-60 w-60 rounded-full bg-yellow-400/10 blur-[120px]" />
+
+        <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
+
           <div>
-            <h3 className="text-base font-semibold mb-1">Email</h3>
+
+            <p className="gold-text uppercase tracking-[0.25em] text-sm font-semibold">
+
+              Ready to Work Together?
+
+            </p>
+
+            <h3 className="text-4xl font-black mt-4">
+
+              Let's Turn Your Idea Into Reality.
+
+            </h3>
+
+            <p className="text-gray-400 mt-6 max-w-2xl leading-8">
+
+              I enjoy building software that solves real-world
+              problems—from modern websites and mobile apps to complete
+              management systems. If you have an idea, let's discuss how
+              we can bring it to life.
+
+            </p>
+
+          </div>
+
+          <div className="flex flex-col gap-4">
+
             <a
-              href={`mailto:${email}`}
-              className="text-brand-400 hover:text-brand-300 break-all"
+              href="mailto:your@email.com"
+              className="primary-btn"
             >
-              {email}
+              Start a Conversation
+
+              <FaArrowRight className="ml-2" />
+
             </a>
+
+            <a
+              href="LG-John-Labalan-CV.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="secondary-btn"
+            >
+              <FaDownload className="mr-2" />
+
+              Download Resume
+
+            </a>
+
           </div>
 
-          <div>
-            <h3 className="text-base font-semibold mb-1">Location</h3>
-            <p className="text-slate-300">Your City, Your Country</p>
-          </div>
-
-          <div>
-            <h3 className="text-base font-semibold mb-1">Links</h3>
-            <ul className="space-y-1 text-slate-300">
-              <li>
-                <a
-                  href="https://github.com/your-username"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-brand-400"
-                >
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/your-username"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-brand-400"
-                >
-                  LinkedIn
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
 
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-5 text-sm text-slate-300">
-          <p className="mb-4 font-medium text-slate-100">Quick message</p>
-          <p className="mb-3">
-            If you prefer, you can send me a short email with:
-          </p>
-          <ul className="mb-4 list-disc space-y-1 pl-5">
-            <li>Who you are</li>
-            <li>What you&apos;re looking for</li>
-            <li>Any links to your project or job description</li>
-          </ul>
-          <p>
-            I&apos;ll do my best to get back to you as soon as possible.
-          </p>
-        </div>
-      </div>
-    </div>
+      </motion.div>
+
+    </section>
   );
 }
 
